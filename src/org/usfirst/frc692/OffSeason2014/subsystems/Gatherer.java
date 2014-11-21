@@ -31,6 +31,19 @@ public class Gatherer extends Subsystem {
         // Set the default command for a subsystem here.
         //setDefaultCommand(new MySpecialCommand());
     }
+    
+    public void gatherMotorForward() {
+        gathererVictor.set(1.0);
+        //gatherer moves clock-wise
+        //ND 11/20/14
+    }
+    
+    public void gatherMotorReverse() {
+        gathererVictor.set(-1.0);
+        //gatherer moves counter clock-wise
+        //ND 11/20/14
+    }
+    
     public void gathererUp() {
         gathererPiston.set(DoubleSolenoid.Value.kReverse);
     }
