@@ -25,18 +25,26 @@ public class  passShooterLimit extends Command {
     // Called just before this Command runs the first time
     protected void initialize() {
         setTimeout(1.5);
+        //shooter will continue until it has passed limit switch
+        //ND 11/20/14
     }
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
         Robot.shooter.shootGo();
+        //shooter shoots when for 1.5 seconds
+        //ND 11/20/14
     }
     // Make this return true when this Command no longer needs to run execute()
     protected boolean isFinished() {
         return isTimedOut();
+        //shooter ends after 1.5 seconds
+        //ND 11/20/14
     }
     // Called once after isFinished returns true
     protected void end() {
         Robot.shooter.shootStop();
+        //shooter stops after 1.5 seconds
+        //ND 11/20/14
     }
     // Called when another command which requires one or more of the same
     // subsystems is scheduled to run
