@@ -39,4 +39,16 @@ public class DriveTrain extends Subsystem {
     {
         robotDrive.tankDrive(LeftDrive, RightDrive);
     }
+    
+    public void autonMoveForward() {
+        robotDrive.drive(1.0, 0.0);
+    }
+    // robot goes with no curve 100% forward
+    // ND 12/8/14
+    
+    public void autonStop() {
+        robotDrive.drive(0.0, 0.0);
+    }
+    // robot stops with no curve
+    // ND 12/8/14
 }
