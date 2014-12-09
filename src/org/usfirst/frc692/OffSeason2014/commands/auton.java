@@ -34,5 +34,9 @@ public class auton extends CommandGroup {
         // e.g. if Command1 requires chassis, and Command2 requires arm,
         // a CommandGroup containing them would require both the chassis and the
         // arm.
+        addSequential(new gathererDown());
+        addSequential(new autonMoveForward());
+        //first gatherer goes down and then robot moves forward
+        //ND 12/08/14
     }
 }
